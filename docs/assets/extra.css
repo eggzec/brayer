@@ -1,0 +1,28 @@
+/* Electric kiwi, the organisation's accent, applied sparingly. */
+:root {
+  --brayer-kiwi: #CCFF00;
+  --brayer-ink: #000000;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: var(--brayer-kiwi);
+  --md-typeset-a-color: var(--brayer-kiwi);
+}
+
+/* The mark is a flat two-tone shape; keep it crisp rather than blurred
+   by the theme's default logo scaling. */
+.md-header__button.md-logo img {
+  image-rendering: auto;
+}
+
+/* Screenshots of generated forms read better with a hairline edge, so
+   the dialog's own light chrome does not bleed into the page. */
+.md-typeset img[src$="example-form.png"] {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 3px;
+}
+
+/* Supported-types table: keep the type column from wrapping mid-name. */
+.md-typeset table:not([class]) td:first-child code {
+  white-space: nowrap;
+}

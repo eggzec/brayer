@@ -1,0 +1,91 @@
+name: 🐞 Bug Report
+description: Report broken or incorrect functionality
+title: "[Bug] "
+labels: ["bug", "needs-verification"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Bug reports are only for broken functionality.**
+        For feature requests or enhancements, please use the appropriate template.
+
+        🚫 Do **NOT** include personal or sensitive information in logs, screenshots, code, etc.
+
+  - type: textarea
+    attributes:
+      label: Bug Summary
+      description: Provide a clear and concise summary of the bug, expected behavior, screenshots, and logs.
+      placeholder: The application crashes when I ...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🔁 Steps to Reproduce
+      description: Provide the exact steps to reproduce the issue.
+      placeholder: |
+        1. Open the app
+        2. Click on "X"
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🔍 Minimal Reproducible Example
+      description: Provide the smallest, self-contained code snippet that reliably reproduces the issue.
+      render: python
+      placeholder: |
+        import pydanticInput, import pydantic
+        class MyModel(pydantic.BaseModel): ...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Buggy Version Information
+      description: The version of OS, application and relevant libraries. Run `pydanticInput --debug` to get this info.
+      placeholder: |
+        OS: Linux 6.1.0-35-amd64 (Debian 6.1.137-1)
+        Architecture: x86_64
+        Python version: 3.10.18
+        App version: 0.1.0
+        Dependencies:
+        * pydantic: 2.11.7
+        * pyside6-essentials: 6.9.1
+
+        **last working version**
+        ...
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: 🐞 Bug Severity (Impact Rating)
+      description: How badly does this bug affect your work?
+      options:
+        - 🔹 Minor – It's annoying but doesn't block me
+        - ⚠️ Moderate – I can work around it, but it's inconvenient
+        - 🚫 Critical – Blocks my work or breaks a major feature
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 💬 Additional Context
+      description: Add any extra context, ideas, or known workarounds.
+      placeholder: Anything else we should know?
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: Misc
+      options:
+        - label: This bug can be reliably reproduced
+          required: true
+        - label: I have searched existing issues for similar bugs
+          required: true
+        - label: I am willing to contribute a fix if possible
