@@ -1,4 +1,4 @@
-![brayer](https://raw.githubusercontent.com/eggzec/brayer/main/docs/assets/brayer-banner.png)
+![brayer](https://raw.githubusercontent.com/eggzec/brayer/master/docs/assets/brayer-banner.png)
 
 # brayer
 
@@ -42,7 +42,7 @@ if person is not None:
 
 A slightly larger model, and the form it produces:
 
-![The generated form](https://raw.githubusercontent.com/eggzec/brayer/main/docs/assets/example-form.png)
+![The generated form](https://raw.githubusercontent.com/eggzec/brayer/master/docs/assets/example-form.png)
 
 Nothing in that window was written by hand. The spin box range comes from
 `Field(ge=1, le=50)`, the two decimal places from `decimal_places=2`, the drop-down
