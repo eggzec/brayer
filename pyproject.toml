@@ -66,7 +66,6 @@ brayer = "brayer._cli:main"
 homepage = "https://eggzec.github.io/brayer/"
 documentation = "https://eggzec.github.io/brayer/"
 source = "https://github.com/eggzec/brayer"
-changelog = "https://eggzec.github.io/brayer/changelog/"
 releasenotes = "https://github.com/eggzec/brayer/releases/latest"
 issues = "https://github.com/eggzec/brayer/issues"
 
