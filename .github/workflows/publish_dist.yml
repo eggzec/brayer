@@ -36,9 +36,24 @@ jobs:
         with:
           verbose: true
 
+      # brayer imports PySide6 at package import time, so the smoke test
+      # needs the same Qt runtime libraries the test matrix installs --
+      # see the matching step in code_test.yml. Without them the import
+      # dies on "libEGL.so.1: cannot open shared object file", which
+      # looks like a broken release rather than a bare runner.
+      - name: Install Qt runtime libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends             libegl1             libgl1             libdbus-1-3             libxkbcommon-x11-0             libxcb-cursor0             libxcb-icccm4             libxcb-image0             libxcb-keysyms1             libxcb-randr0             libxcb-render-util0             libxcb-shape0             libxcb-xinerama0             libxcb-xkb1
+
       - name: Smoke Test on PyPI
         shell: bash
+        env:
+          # No display on the runner; render into memory instead.
+          QT_QPA_PLATFORM: offscreen
+          QT_LOGGING_RULES: "qt.qpa.*=false"
         run: |
+          # PyPI's index can lag the upload by a few seconds.
           sleep 60
           pip install -v --index-url https://pypi.org/simple/ brayer
           python -c "import brayer;print(brayer.__version__)"
