@@ -1,6 +1,6 @@
 # brayer
 
-![brayer](https://raw.githubusercontent.com/eggzec/brayer/main/docs/assets/brayer-icon.png){ width="140" }
+![brayer](https://raw.githubusercontent.com/eggzec/brayer/master/docs/assets/brayer-icon.png){ width="140" }
 
 **Turn a Pydantic model into a desktop form — declare the shape, get a
 validated object back.**
@@ -31,7 +31,7 @@ if person is not None:
 
 A slightly larger model, and the form it produces:
 
-![The generated form](https://raw.githubusercontent.com/eggzec/brayer/main/docs/assets/example-form.png)
+![The generated form](https://raw.githubusercontent.com/eggzec/brayer/master/docs/assets/example-form.png)
 
 Nothing in that window was written by hand. The spin box range comes
 from `Field(ge=1, le=50)`, the two decimal places from
@@ -90,4 +90,4 @@ Use it when the data is easier to describe as a class than as a UI:
 ## License
 
 GNU General Public License v3 or later. See
-[LICENSE](https://github.com/eggzec/brayer/blob/main/LICENSE).
+[LICENSE](https://github.com/eggzec/brayer/blob/master/LICENSE).
