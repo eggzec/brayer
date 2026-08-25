@@ -154,9 +154,12 @@ jobs:
           rm -rf src
           uv run --no-sync pytest -v -n auto --cov --cov-report=xml tests
 
+      # Coverage reporting is informational, so an upload that fails --
+      # Codecov being down, or the repository not yet activated there --
+      # must not red the whole matrix. The test run above is the gate.
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v7
         with:
-          fail_ci_if_error: true
+          fail_ci_if_error: false
           use_oidc: true
           verbose: true
