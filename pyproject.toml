@@ -79,7 +79,7 @@ docs = [
     "zensical>=0.0.53"
 ]
 lint = [
-    "ruff==0.16.*",
+    "ruff>=0.16,<0.18",
 ]
 test = [
     "pytest>=8.3",
